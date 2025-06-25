@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+
+
+    <!-- * ~~~ meta ~~~ * -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- * ~~~  Google Fonts ~~~ * -->
+
+
+    <!-- * ~~~ Icon fav ~~~ * -->
+
+    <!-- * ~~~ Font Awsome ~~~ * -->
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <!-- * ~~~ Bootstrab ~~~ * -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- * ~~~ Main style ~~~ * -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- * ~~~ Media query ~~~ * -->
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+    <nav>
+        <h1 class="text-white">cdsc</h1>
+    </nav>
+
+
+    <main class="w-100 min-vh-100">
+        <div id="finderSec" class="py-70">
+            <div class="container  ">
+
+                <form class="position-relative mb-70" action="">
+                    <input class="form-control fs-14 rounded-pill " placeholder="Find your location">
+                    <button type="submit"
+                        class="FinderSubmit fs-14 btn rounded-pill position-absolute bg-skyBlue">Find</button>
+                </form>
+
+                <div class="Forecast-table">
+                    <div id="TodayForecast" class="col-lg-4">
+                        <div
+                            class="bg-gray-SemiDark p-10 d-flex justify-content-between align-items-center rounded-top-3">
+                            <div class="day m-0">Tuesday</div>
+                            <div class="date m-0">24June</div>
+                        </div>
+                        <div class="bg-gray-light px-30 py-20">
+                            <div class="location">Cairo</div>
+                            <div class="text-white d-flex align-items-center">
+                                <div class="ForecastDegree me-30">34.2&deg;C</div>
+                                <div class="ForecastConditionPic"><img src="images/sunny.png" alt=""></div>
+                            </div>
+                            <div class="ForecastCondition text-skyBlue py-20">Sunny</div>
+                            <ul class="d-flex flex-row flex-nowrap column-gap-4 list-unstyled">
+                                <li>
+                                    <img src="images/rain perc.png" alt="">
+                                    <span class="RainPercentage">20%</span>
+                                </li>
+                                <li>
+                                    <img src="images/wind speed.png" alt="">
+                                    <span class="WindSpeed">18km/hr</span>
+                                </li>
+                                <li>
+                                    <img src="images/wind direction.png" alt="">
+                                    <span class="WindDirection">East</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="NextDayForecast" class="col-lg-4 ">
+                        <div
+                            class="bg-gray-dark p-10 text-center">
+                            <div class="day m-0">Tuesday</div>
+                        </div>
+                        <div class="bg-gray-SemiDark2 pt-50 px-20 pb-10">
+                            <div class="text-white text-center">
+                                <div class="ForecastConditionPic mb-20"><img src="images/sunny.png" alt=""></div>
+                                <div class="ForecastDegree">34.2&deg;C</div>
+                                <div class="ForecastDegree2">34.2&deg;C</div>
+                            </div>
+                            <div class="ForecastCondition text-skyBlue py-20 text-center">Sunny</div>
+                        </div>
+                    </div>
+                    <div id="NextDayForecast" class="col-lg-4 ">
+                        <div
+                            class="bg-gray-SemiDark p-10 text-center">
+                            <div class="day m-0">Tuesday</div>
+                        </div>
+                        <div class="bg-gray-light pt-50 px-20 pb-10">
+                            <div class="text-white text-center">
+                                <div class="ForecastConditionPic mb-20"><img src="images/sunny.png" alt=""></div>
+                                <div class="ForecastDegree">34.2&deg;C</div>
+                                <div class="ForecastDegree2">34.2&deg;C</div>
+                            </div>
+                            <div class="ForecastCondition text-skyBlue py-20 text-center">Sunny</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+    <!-- * ~~~ Bootstrab js ~~~ * -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scribt.js"></script>
+</body>
+
+</html>
