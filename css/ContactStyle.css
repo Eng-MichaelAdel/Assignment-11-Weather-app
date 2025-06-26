@@ -122,8 +122,6 @@ ul {
 }
 /* * -----------> finderSec <------------- */
 #finderSec {
-  background-image: url(../images/banner.png);
-  background-repeat: no-repeat;
   min-height: 350px;
 }
 
@@ -160,34 +158,6 @@ input::placeholder {
   border-color: transparent;
 }
 
-#Forecast-table #TodayForecast .Degree {
-  font-size: 90px;
-  font-weight: 700;
-  line-height: 135px;
-}
-
-#Forecast-table #TodayForecast .ConditionPic img {
-  width: 90px;
-  height: 90px;
-}
-
-#Forecast-table .NextDays .Degree {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 36px;
-}
-#Forecast-table .NextDays .Degree2 {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 24px;
-  color: #bfc1c8;
-}
-
-#Forecast-table .NextDays .ConditionPic img {
-  width: 48px;
-  height: 48px;
-}
-
 footer .Links a.LinksBtn {
   width: 40px;
   height: 40px;
@@ -207,7 +177,6 @@ footer .Links a.LinksBtn:focus {
 }
 
 /* * ----------------->  <----------------- */
-
 
 .navbar {
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");

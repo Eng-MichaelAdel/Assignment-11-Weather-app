@@ -2,35 +2,74 @@
 /* todo For Small Devices */
 /* ======================================================== */
 @media (min-width: 576px) {
-
+  .container {
+    max-width: 100%;
+  }
 }
 
 /* ======================================================== */
 /* ! For Medium Devices */
 /* ======================================================== */
 @media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
 }
 
 /* ======================================================== */
 /* ~ For Large Devices */
 /* ======================================================== */
 @media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+
+  .navbar-nav {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 0px;
+  --bs-nav-link-padding-x: 0px;
+  --bs-nav-link-padding-y: 0px;
+}
+
+.navbar-collapse{
+  padding-top: 0px;
+}
+
+.navItems-borderBot{
+  border-bottom: none;
+}
+
+  a.nav-link {
+  padding: 5px 25px !important;
+  margin-left: 10px;
+  border-radius: 30px !important;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+  a.nav-link:focus,
+  a.nav-link:hover {
+    border: 2px solid #009ad8;
+  }
 }
 
 /* ======================================================== */
 /* ^ For X-Large Devices */
 /* ======================================================== */
 @media (min-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
 }
 
 /* ======================================================== */
 /* @ For XX-Large Devices */
 /* ======================================================== */
 @media (min-width: 1400px) {
-.container {
-    max-width: 1140px;
+  .container {
+    max-width: 1170px;
   }
-}
 }
 
 /* ****************************************************************************************************************************************** */
