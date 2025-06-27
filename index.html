@@ -14,25 +14,32 @@
 
     <!-- * ~~~  Google Fonts ~~~ * -->
 
-    
+
     <!-- * ~~~ Icon fav ~~~ * -->
-    
+
     <!-- * ~~~ Font Awsome ~~~ * -->
     <link rel="stylesheet" href="css/all.min.css">
-    
+
     <!-- * ~~~ Bootstrab ~~~ * -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    
+
     <!-- * ~~~ Main style ~~~ * -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <!-- * ~~~ Media query ~~~ * -->
     <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
-    <div id="LoadingMsg" class="d-none">Loading...</div>
-    
+    <div class="sk-chase position-fixed d-none">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+    </div>
+
     <nav class="navbar navbar-expand-lg  py-50">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -81,10 +88,12 @@
         <div id="finderSec" class="pt-70">
             <div class="container  ">
                 <form class="position-relative mb-70" action="">
-                    <input id="SearchByCountry" class="form-control fs-14 rounded-pill " placeholder="Find your location">
+                    <input id="SearchByCountry" class="form-control fs-14 rounded-pill "
+                        placeholder="Find your location">
                     <button id="SubmitId" type="submit"
-                    class="px-40 FormBtn fs-14 btn rounded-pill position-absolute bg-skyBlue">Find</button>
-                    <h6 id="SearchMsgId" class=" fw-bold position-absolute d-none">Please enter at least 3 characters</h6>
+                        class="px-40 FormBtn fs-14 btn rounded-pill position-absolute bg-skyBlue">Find</button>
+                    <h6 id="SearchMsgId" class=" fw-bold position-absolute d-none">Please enter at least 3 characters
+                    </h6>
                 </form>
 
                 <div id="Forecast-table" class="mb-50 d-lg-flex rounded-3 overflow-hidden">
@@ -97,7 +106,8 @@
                             <div class="Country fs-18">Cairo</div>
                             <div class="text-white d-flex align-items-center d-flex flex-wrap">
                                 <div class="AvgDeg me-30">29&deg;C</div>
-                                <div class="ConditionPic"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition"></div>
+                                <div class="ConditionPic"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png"
+                                        alt="weather condition"></div>
                             </div>
                             <div class="Condition text-skyBlue py-20">Sunny</div>
                             <ul class="d-flex flex-row flex-nowrap column-gap-4">
@@ -122,7 +132,9 @@
                         </div>
                         <div class="bg-gray-SemiDark2 flex-grow-1 pt-50 px-20 pb-10">
                             <div class="text-white text-center">
-                                <div class="ConditionPic mb-20"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition"></div>
+                                <div class="ConditionPic mb-20"><img
+                                        src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition">
+                                </div>
                                 <div class="MaxDeg">34.2&deg;C</div>
                                 <div class="MinDeg">34.2&deg;C</div>
                             </div>
@@ -135,7 +147,9 @@
                         </div>
                         <div class="bg-gray-light flex-grow-1 pt-50 px-20 pb-10">
                             <div class="text-white text-center">
-                                <div class="ConditionPic mb-20"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition"></div>
+                                <div class="ConditionPic mb-20"><img
+                                        src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition">
+                                </div>
                                 <div class="MaxDeg">34.2&deg;C</div>
                                 <div class="MinDeg">34.2&deg;C</div>
                             </div>
@@ -187,7 +201,7 @@
             </div>
         </div>
     </footer>
-    
+
 
 
 

@@ -4,7 +4,7 @@ var SubmitMsgElem = document.querySelector("#SearchMsgId");
 
 var SearchInputElem = document.querySelector("#SearchByCountry");
 
-var LoadingMsgElem = document.querySelector("#LoadingMsg");
+var LoadingMsgElem = document.querySelector(".sk-chase");
 // ********** initializing data  **********
 var InputRegex = /^[a-zA-Z\s\-]{3,}$/;
 SubmitMsgElem.classList.add("d-none");

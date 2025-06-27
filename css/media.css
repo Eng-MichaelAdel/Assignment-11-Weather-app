@@ -25,33 +25,38 @@
   }
 
   .navbar-nav {
-  background-color: transparent;
-  text-align: center;
-  border-radius: 0px;
-  --bs-nav-link-padding-x: 0px;
-  --bs-nav-link-padding-y: 0px;
-}
+    background-color: transparent;
+    text-align: center;
+    border-radius: 0px;
+    --bs-nav-link-padding-x: 0px;
+    --bs-nav-link-padding-y: 0px;
+  }
 
-.navbar-collapse{
-  padding-top: 0px;
-}
+  .navbar-collapse {
+    padding-top: 0px;
+  }
 
-.navItems-borderBot{
-  border-bottom: none;
-}
+  .navItems-borderBot {
+    border-bottom: none;
+  }
 
   a.nav-link {
-  padding: 5px 25px !important;
-  margin-left: 10px;
-  border-radius: 30px !important;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
-}
+    padding: 5px 25px !important;
+    margin-left: 10px;
+    border-radius: 30px !important;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
 
   a.nav-link:focus,
   a.nav-link:hover {
     border: 2px solid #009ad8;
   }
+
+  a.nav-link.active{
+    border: 2px solid #009ad8;
+  }
+
 }
 
 /* ======================================================== */
