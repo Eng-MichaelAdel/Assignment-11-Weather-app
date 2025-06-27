@@ -17,7 +17,6 @@ window.addEventListener("DOMContentLoaded", () => {
     navigator.geolocation.getCurrentPosition(async function (location) {
       LocatioData.long = location.coords.longitude;
       LocatioData.lat = location.coords.latitude;
-      console.log(LocatioData.lat, ",", LocatioData.long);
       await Get_SetForecastData();
     });
   }
@@ -28,11 +27,8 @@ SearchInputElem.addEventListener("input", function () {
   if (LocatioData.CityName) {
     if (!InputRegex.test(LocatioData.CityName.trim())) {
       SubmitMsgElem.classList.remove("d-none");
-      console.log("at least 3 char");
     } else {
       SubmitMsgElem.classList.add("d-none");
-      console.log("you are typing", LocatioData.CityName);
-      console.log("you are typing", LocatioData.CityName.length);
       Get_SetForecastData();
     }
   } else {
@@ -45,12 +41,8 @@ SubmitBtnElem.addEventListener("click", function (eInfo) {
   LocatioData.CityName = SearchInputElem.value;
   if (!InputRegex.test(LocatioData.CityName.trim())) {
     SubmitMsgElem.classList.remove("d-none");
-    console.log("at least 3 char");
   } else {
     SubmitMsgElem.classList.add("d-none");
-    console.log("now more than 3 char");
-    console.log("you are typing", LocatioData.CityName);
-    console.log("you are typing", LocatioData.CityName.length);
     Get_SetForecastData();
   }
 });
@@ -87,7 +79,6 @@ async function Get_SetForecastData() {
       return;
     }
     SetAllTheForecastData();
-    console.log(ForecastData);
   } catch (error) {
     console.error("Error fetching weather data:", error);
   } finally {
