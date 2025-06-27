@@ -66,14 +66,14 @@ async function Get_SetForecastData() {
 
     if (!CityName) {
       var response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${UserKey}&q=${lat},${long}&days=3&aqi=no&alerts=no `,
+        `https://api.weatherapi.com/v1/forecast.json?key=${UserKey}&q=${lat},${long}&days=3&aqi=no&alerts=no `,
         {
           cache: "default",
         }
       );
     } else {
       var response = await fetch(
-        `http://api.weatherapi.com/v1/forecast.json?key=${UserKey}&q=${CityName}&days=3&aqi=no&alerts=no `,
+        `https://api.weatherapi.com/v1/forecast.json?key=${UserKey}&q=${CityName}&days=3&aqi=no&alerts=no `,
         {
           cache: "default",
         }
