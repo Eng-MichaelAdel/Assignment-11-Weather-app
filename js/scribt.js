@@ -3,42 +3,47 @@ var SubmitBtnElem = document.querySelector("#SubmitId");
 var SubmitMsgElem = document.querySelector("#SearchMsgId");
 
 var SearchInputElem = document.querySelector("#SearchByCountry");
-var SearchInputValue = SearchInputElem.value;
 
-var InputRegex = /^[a-zA-Z]{3,}$/;
-// ********** initializing users data  **********
+var LoadingMsgElem = document.querySelector("#LoadingMsg");
+// ********** initializing data  **********
+var InputRegex = /^[a-zA-Z\s\-]{3,}$/;
+SubmitMsgElem.classList.add("d-none");
+
 var ForecastData = [];
 var LocatioData = {};
 
-SubmitMsgElem.classList.add("d-none");
-if (!SearchInputValue) {
-  console.log("wait for default");
-  navigator.geolocation.getCurrentPosition(async function (location) {
-    LocatioData.long = location.coords.longitude;
-    LocatioData.lat = location.coords.latitude;
-    console.log(LocatioData.lat, ",", LocatioData.long);
-
-    Get_SetForecastData();
-  });
-}
+window.addEventListener("DOMContentLoaded", () => {
+  if (!SearchInputElem.value) {
+    navigator.geolocation.getCurrentPosition(async function (location) {
+      LocatioData.long = location.coords.longitude;
+      LocatioData.lat = location.coords.latitude;
+      console.log(LocatioData.lat, ",", LocatioData.long);
+      await Get_SetForecastData();
+    });
+  }
+});
 
 SearchInputElem.addEventListener("input", function () {
   LocatioData.CityName = SearchInputElem.value;
-  if (!InputRegex.test(LocatioData.CityName)) {
-    SubmitMsgElem.classList.remove("d-none");
-    console.log("at least 3 char");
+  if (LocatioData.CityName) {
+    if (!InputRegex.test(LocatioData.CityName.trim())) {
+      SubmitMsgElem.classList.remove("d-none");
+      console.log("at least 3 char");
+    } else {
+      SubmitMsgElem.classList.add("d-none");
+      console.log("you are typing", LocatioData.CityName);
+      console.log("you are typing", LocatioData.CityName.length);
+      Get_SetForecastData();
+    }
   } else {
     SubmitMsgElem.classList.add("d-none");
-    console.log("you are typing", LocatioData.CityName);
-    console.log("you are typing", LocatioData.CityName.length);
-    Get_SetForecastData();
   }
 });
 
 SubmitBtnElem.addEventListener("click", function (eInfo) {
   eInfo.preventDefault();
   LocatioData.CityName = SearchInputElem.value;
-  if (!InputRegex.test(LocatioData.CityName)) {
+  if (!InputRegex.test(LocatioData.CityName.trim())) {
     SubmitMsgElem.classList.remove("d-none");
     console.log("at least 3 char");
   } else {
@@ -56,6 +61,9 @@ async function Get_SetForecastData() {
   var long = LocatioData.long;
   var CityName = LocatioData.CityName;
   try {
+    LoadingMsgElem.classList.remove("d-none");
+    SubmitMsgElem.classList.add("d-none");
+
     if (!CityName) {
       var response = await fetch(
         `http://api.weatherapi.com/v1/forecast.json?key=${UserKey}&q=${lat},${long}&days=3&aqi=no&alerts=no `,
@@ -73,10 +81,17 @@ async function Get_SetForecastData() {
     }
 
     ForecastData = await response.json();
+    if (ForecastData.error) {
+      SubmitMsgElem.classList.remove("d-none");
+      SubmitMsgElem.textContent = ForecastData.error.message;
+      return;
+    }
     SetAllTheForecastData();
     console.log(ForecastData);
   } catch (error) {
     console.error("Error fetching weather data:", error);
+  } finally {
+    LoadingMsgElem.classList.add("d-none");
   }
 }
 function SetAllTheForecastData() {

@@ -43,7 +43,6 @@
                         <p class="fs-16 m-0 mb-1">Weather</p>
                         <p class="fs-10 m-0 text-gray">tagline goes here</p>
                     </figcaption>
-
                 </div>
 
             </a>
@@ -55,7 +54,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item navItems-borderBot">
-                        <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link text-white active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item navItems-borderBot">
                         <a class="nav-link text-white" href="#">News</a>
@@ -67,7 +66,7 @@
                         <a href="" class="nav-link text-white">Photos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link text-white">Contact</a>
+                        <a href="Contact.html" class="nav-link text-white">Contact</a>
                     </li>
                 </ul>
 
@@ -75,17 +74,74 @@
         </div>
     </nav>
 
+    <nav>
+        <div class="container">
+            <div class="bg-gray-SemiDark2 px-30 py-20 rounded-pill" style="--bs-breadcrumb-divider: '-->';"
+                aria-label="breadcrumb">
+                <ol class="breadcrumb m-0">
+                    <li class="breadcrumb-item"><a class="homeBread" href="#">Home</a></li>
+                    <li class="breadcrumb-item active " aria-current="page">Contact</li>
+                </ol>
+            </div>
+        </div>
+    </nav>
 
     <main>
-        <div id="finderSec" class="pt-70">
+        <div class="py-70">
             <div class="container  ">
-                
+                <div class="px-15 row gy-4 justify-content-between align-items-start">
+                    <div class="px-20 py-20 me-2 bg-gray-SemiDark2 col-12 col-lg-5 rounded-3 ">
+                        <div class="map"></div>
+                        <div class="d-flex flex-column">
+                            <a href="" class="text-gray d-flex align-items-center">
+                                <i class="fa-solid fa-location-dot text-skyBlue fs-4 pe-2"></i>
+                                <span>Company Name INC.<br> 2803 Avenue Street, Los Angeles</span>
+                            </a>
+                            <div class="d-flex flex-wrap">
+                                <a href="" class="text-gray me-5 d-flex align-items-center mt-3">
+                                    <i class="fa-solid fa-phone-volume text-skyBlue fs-5 pe-2"></i>
+                                    +1 800 314 235
+                                </a>
+                                <a href="" class="text-gray d-flex align-items-center mt-3">
+                                    <i class="fa-solid fa-envelope text-skyBlue fs-5 pe-2"></i>
+                                    contact@companyname.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactForm col-lg-6">
+                        <h1 class="text-white mb-20">Contact us</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi consectetur inventore
+                            ducimus, facilis, numquam id soluta omnis eius recusandae nesciunt vero repellat harum cum.
+                            Nisi facilis odit hic, ipsum sed!</p>
+                        <div class="row gx-2">
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control rounded-pill" placeholder="Your name...">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control rounded-pill" placeholder="Email Address...">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control rounded-pill" placeholder="Company name...">
+                            </div>
+                            <div class="col-lg-6">
+                                <input type="text" class="form-control rounded-pill" placeholder="Website...">
+                            </div>
+                            <div>
+                                <textarea class="form-control rounded-5" placeholder="Message..." rows="5"></textarea>
+                            </div>
+
+                            <button
+                                class="ContactFormBtn col-3 col-lg-4 col-xxl-3 ms-auto fs-14 py-10 px-20 btn rounded-pill bg-skyBlue ">Submit
+                                Query</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-
         <div class="bg-gray-SemiDark2 py-50">
             <div class="container">
                 <div class="d-flex flex-wrap justify-content-between">

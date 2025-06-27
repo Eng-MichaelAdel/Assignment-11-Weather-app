@@ -28,6 +28,9 @@ ul {
   padding: 10px;
 }
 
+.px-15 {
+  padding-inline: 15px;
+}
 .px-20 {
   padding-inline: 20px;
 }
@@ -49,6 +52,9 @@ ul {
 }
 .py-50 {
   padding-block: 50px;
+}
+.py-70 {
+  padding-block: 70px;
 }
 
 .pt-50 {
@@ -120,10 +126,62 @@ ul {
 .text-gray {
   color: #bfc1c8;
 }
-/* * -----------> finderSec <------------- */
-#finderSec {
-  min-height: 350px;
+/* * -----------------> navbar <----------------- */
+
+.navbar {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(0, 154, 216)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler:hover {
+  border: 2px solid #009ad8;
+}
+
+.navbar-toggler {
+  padding: 20px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  line-height: 0.9;
+  font-size: 0px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon {
+  width: 13px;
+  height: 17px;
+  vertical-align: baseline;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-nav {
+  background-color: #262936;
+  text-align: center;
+  border-radius: 10px;
+  --bs-nav-link-padding-x: 20px;
+  --bs-nav-link-padding-y: 20px;
+}
+
+.navbar-collapse {
+  padding-top: 30px;
+}
+
+.navItems-borderBot {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+a.nav-link:focus,
+a.nav-link:hover {
+  color: rgb(0, 154, 216) !important;
+}
+
+/* * -----------> finderSec <------------- */
 
 .form-control {
   padding: 20px 50px 20px 20px;
@@ -176,59 +234,56 @@ footer .Links a.LinksBtn:focus {
   outline: thin dotted;
 }
 
-/* * ----------------->  <----------------- */
+/* * -----------> breadcrumb <------------- */
 
-.navbar {
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.breadcrumb a {
+  color: #bfc1c8;
+  transition: 0.3s ease;
 }
 
-.navbar-toggler:hover .navbar-toggler-icon {
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(0, 154, 216)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.breadcrumb a:hover {
+  text-decoration: underline !important;
 }
 
-.navbar-toggler:hover {
-  border: 2px solid #009ad8;
+.breadcrumb-item.active {
+  color: #ffffff;
 }
 
-.navbar-toggler {
-  padding: 20px;
-  border: 2px solid transparent;
-  border-radius: 999px;
-  line-height: 0.9;
-  font-size: 0px;
-  transition: all 0.3s ease;
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #bfc1c8;
 }
 
-.navbar-toggler-icon {
-  width: 13px;
-  height: 17px;
-  vertical-align: baseline;
-  transition: all 0.3s ease;
+/* * -----------> main <------------- */
+main div.map {
+  height: 220px;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+.contactForm input,.contactForm textarea {
+  padding: 15px;
+  margin-bottom: 10px;
+  color: white;
+  border: 2px solid #393c48;
+  background: transparent;
+}
+
+.contactForm input:hover,
+.contactForm input:focus,
+.contactForm textarea:hover,
+.contactForm textarea:focus {
+  border-color: #009ad8;
+}
+
+textarea::placeholder {
+  color: #85868c !important;
+}
+
+.ContactFormBtn{
+    color: #ffffff;
 }
 
 
-.navbar-nav {
-  background-color: #262936;
-  text-align: center;
-  border-radius: 10px;
-  --bs-nav-link-padding-x: 20px;
-  --bs-nav-link-padding-y: 20px;
+.ContactFormBtn:hover {
+  color: #ffffff;
+  background-color: #009ad8;
+  border-color: transparent;
 }
-
-.navbar-collapse{
-  padding-top: 30px;
-}
-
-.navItems-borderBot{
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-  a.nav-link:focus,
-  a.nav-link:hover {
-    color: rgb(0, 154, 216) !important;
-  }
-
