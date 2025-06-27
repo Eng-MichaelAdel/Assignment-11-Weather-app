@@ -80,9 +80,10 @@
         <div id="finderSec" class="pt-70">
             <div class="container  ">
                 <form class="position-relative mb-70" action="">
-                    <input class="form-control fs-14 rounded-pill " placeholder="Find your location">
-                    <button type="submit"
-                        class="px-40 FormBtn fs-14 btn rounded-pill position-absolute bg-skyBlue">Find</button>
+                    <input id="SearchByCountry" class="form-control fs-14 rounded-pill " placeholder="Find your location">
+                    <button id="SubmitId" type="submit"
+                    class="px-40 FormBtn fs-14 btn rounded-pill position-absolute bg-skyBlue">Find</button>
+                    <h6 id="SearchMsgId" class=" fw-bold position-absolute d-none">Please enter at least 3 characters</h6>
                 </form>
 
                 <div id="Forecast-table" class="mb-50 d-lg-flex rounded-3 overflow-hidden">
@@ -92,12 +93,12 @@
                             <div class="date m-0">24June</div>
                         </div>
                         <div class="bg-gray-light px-20 py-30">
-                            <div class="location fs-18">Cairo</div>
+                            <div class="Country fs-18">Cairo</div>
                             <div class="text-white d-flex align-items-center d-flex flex-wrap">
-                                <div class="Degree me-30">29&deg;C</div>
-                                <div class="ConditionPic"><img src="images/sunny.png" alt=""></div>
+                                <div class="AvgDeg me-30">29&deg;C</div>
+                                <div class="ConditionPic"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition"></div>
                             </div>
-                            <div class="ForecastCondition text-skyBlue py-20">Sunny</div>
+                            <div class="Condition text-skyBlue py-20">Sunny</div>
                             <ul class="d-flex flex-row flex-nowrap column-gap-4">
                                 <li>
                                     <img src="images/rain perc.png" alt="">
@@ -114,30 +115,30 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="SecondDayForecast" class="NextDays col-lg-4 d-flex flex-column">
+                    <div class="NextDays col-lg-4 d-flex flex-column">
                         <div class="bg-gray-dark p-10 text-center">
                             <div class="day m-0">Tuesday</div>
                         </div>
                         <div class="bg-gray-SemiDark2 flex-grow-1 pt-50 px-20 pb-10">
                             <div class="text-white text-center">
-                                <div class="ConditionPic mb-20"><img src="images/sunny.png" alt=""></div>
-                                <div class="Degree">34.2&deg;C</div>
-                                <div class="Degree2">34.2&deg;C</div>
+                                <div class="ConditionPic mb-20"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition"></div>
+                                <div class="MaxDeg">34.2&deg;C</div>
+                                <div class="MinDeg">34.2&deg;C</div>
                             </div>
                             <div class="Condition text-skyBlue py-20 text-center">Sunny</div>
                         </div>
                     </div>
-                    <div id="ThirdDayForecast" class="NextDays col-lg-4 d-flex flex-column">
+                    <div class="NextDays col-lg-4 d-flex flex-column">
                         <div class="bg-gray-SemiDark p-10 text-center">
                             <div class="day m-0">Tuesday</div>
                         </div>
                         <div class="bg-gray-light flex-grow-1 pt-50 px-20 pb-10">
                             <div class="text-white text-center">
-                                <div class="ConditionPic mb-20"><img src="images/sunny.png" alt=""></div>
-                                <div class="Degree">34.2&deg;C</div>
-                                <div class="Degree2">34.2&deg;C</div>
+                                <div class="ConditionPic mb-20"><img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="weather condition"></div>
+                                <div class="MaxDeg">34.2&deg;C</div>
+                                <div class="MinDeg">34.2&deg;C</div>
                             </div>
-                            <div class="Condition text-skyBlue py-20 text-center">Sunny</div>
+                            <div class="Condition text-skyBlue py-20 text-center"></div>
                         </div>
                     </div>
                 </div>
