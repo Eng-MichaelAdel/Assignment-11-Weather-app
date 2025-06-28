@@ -29,6 +29,7 @@ SearchInputElem.addEventListener("input", function () {
       SubmitMsgElem.classList.remove("d-none");
     } else {
       SubmitMsgElem.classList.add("d-none");
+      SubmitMsgElem.textContent = "Please enter at least 3 characters";
       Get_SetForecastData();
     }
   } else {
